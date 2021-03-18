@@ -30,7 +30,6 @@ namespace RockPaperScissorsGame
             players = new List<Player>();
             lck = new object();
 
-
             LoadRulesFile();
             server.Start(50);
 
@@ -58,10 +57,8 @@ namespace RockPaperScissorsGame
                             SendToPlayerMessage(player, rules);
 
                             PlayGame(player, socket);
-
                         });
                     }
-
                 }
                 catch (Exception)
                 {

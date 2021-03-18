@@ -36,7 +36,9 @@ namespace PlayerGame
             string message = ((DataMessage)Transfer.ReceiveTCP(player)).Message;
             Console.WriteLine(message);
             Console.WriteLine("\tИГРА НАЧАЛАСЬ!");
+
             Task task = Task.Run(() => Receive());
+
             SendMessage();
 
             Console.ReadKey();
